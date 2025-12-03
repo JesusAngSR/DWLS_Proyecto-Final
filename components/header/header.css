@@ -1,0 +1,132 @@
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(240,240,240);
+    height: 50px;
+    border: solid 2px rgb(200,200,200);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+}
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 15%;
+    font-family: Arial;
+    font-size: 18px;
+    color: rgb(37, 99, 235);
+}
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 80%;
+    width: 33%;
+}
+.header-nav > a {
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(21, 28, 43);
+    text-decoration: none;
+    transition: 50ms;
+    transition: transform 50ms ease;
+}
+.header-nav > a:hover {
+    color: rgb(37, 99, 235);
+    transform: scale(1.10);
+}
+.header-nav > a:active {
+    transform: scale(0.90);
+}
+.header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 80%;
+    width: 30%;
+}
+.search {
+    background-image: url('https://img.icons8.com/ios-filled/50/search.png');
+    background-size: 16px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-color: rgb(225, 225, 225);
+    border: solid 2px rgb(21, 28, 43);
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 10px;
+    height: 80%;
+    width: 70%;
+    transition: 50ms;
+    transition: transform 50ms ease;
+}
+.search:hover {
+    border: solid 2px rgb(37, 99, 235);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+.search:focus {
+    outline: none; 
+    border: solid 2px rgb(37, 99, 235);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+}
+.cart-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: rgb(225, 225, 225);
+    border: solid 2px rgb(21, 28, 43);
+    border-radius: 8px;
+    width: 25%;
+    height: 80%;
+    cursor: pointer;
+    transition: 50ms;
+    transition: transform 50ms ease;
+}
+#cart-ico {
+    width: 20px;
+    height: 20px;
+}
+.cart-btn:hover {
+    border: solid 2px rgb(37, 99, 235);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+.cart-btn:active {
+    transform: scale(0.90);
+}
+.header-access {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 80%;
+    width: 20%;
+}
+.login,
+.sign-in {
+    background-color: rgb(225, 225, 225);
+    border: solid 2px rgb(21, 28, 43);
+    border-radius: 8px;
+    width: 40%;
+    height: 80%;
+    cursor: pointer;
+    transition: 50ms;
+    transition: transform 50ms ease;
+}
+.login:hover,
+.sign-in:hover {
+    border: solid 2px rgb(37, 99, 235);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+.login:active,
+.sign-in:active {
+    transform: scale(0.90);
+}
