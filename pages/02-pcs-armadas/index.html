@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PCs Armadas</title>
-
+    <title>PCs Armadas - TechStore</title>
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/components/header/header.css">
-
+    
+    <!-- Estilos específicos para esta página -->
+    <link rel="stylesheet" href="/css/pcs-armadas.css">
+    
     <script src="/components/header/insert-header.js" defer></script>
 </head>
 <body>
     <div include-html="/components/header/index.html"></div>
+
+    <!-- Contenido principal -->
+    <main class="pcs-armadas-container">
+        <section class="hero-section">
+            <h1>PCs Armadas Listas para Battlestation</h1>
+            <p>Elige tu máquina ideal: gaming, edición, oficina o streaming. Todas probadas y con garantía.</p>
+        </section>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="entry">Entrada</button>
+            <button class="filter-btn" data-category="mid">Media</button>
+            <button class="filter-btn" data-category="high">Alta</button>
+            <button class="filter-btn" data-category="ultra">Ultra</button>
+        </div>
+
+        <div class="pcs-grid" id="pcs-grid">
+            <!-- Las PCs se generarán con JavaScript -->
+        </div>
+    </main>
+
+    <!-- Script para cargar las PCs -->
+    <script src="/js/pcs-armadas.js" defer></script>
 </body>
 </html>

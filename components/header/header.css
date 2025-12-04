@@ -78,6 +78,7 @@
 .cart-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 10px 15px;
     background-color: rgb(225, 225, 225);

@@ -4,3 +4,8 @@ document.querySelectorAll('[include-html]').forEach(el => {
                 .then(data => el.innerHTML = data);
         }
 );
+document.addEventListener("click", (e) => {
+    if (e.target.matches("#login-btn")) {
+        window.location.href = "/pages/05-login/index.html";
+    }
+});
