@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     background: rgb(240,240,240);
-    height: 50px;
+    height: clamp(50px, 8vh, 70px);
     border: solid 2px rgb(200,200,200);
     box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
 }
@@ -12,27 +12,29 @@
     justify-content: center;
     align-items: center;
     height: 80%;
-    width: 15%;
+    width: clamp(10%, 15%, 20%);
     font-family: Arial;
-    font-size: 18px;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    flex: 1;
     color: rgb(37, 99, 235);
 }
 .header-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: clamp(10px, 1vw, 20px);
+    flex: 2;
     height: 80%;
     width: 33%;
 }
 .header-nav > a {
     font-family: Arial;
-    font-size: 14px;
+    font-size: clamp(0.8rem, 0.9vw, 1rem);
     font-weight: bold;
     color: rgb(21, 28, 43);
     text-decoration: none;
     transition: 50ms;
-    transition: transform 50ms ease;
+    transition: transform 50ms ease, color 0.15s ease;
 }
 .header-nav > a:hover {
     color: rgb(37, 99, 235);
@@ -45,13 +47,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: clamp(10px, 2vw, 20px);
+    flex: 2;
     height: 80%;
     width: 30%;
 }
 .search {
     background-image: url('https://img.icons8.com/ios-filled/50/search.png');
-    background-size: 16px;
+    background-size: clamp(14px, 2vw, 18px);
     background-position: 5px center;
     background-repeat: no-repeat;
     background-color: rgb(225, 225, 225);
@@ -60,9 +63,10 @@
     padding-left: 25px;
     padding-right: 10px;
     height: 80%;
-    width: 70%;
-    transition: 50ms;
-    transition: transform 50ms ease;
+    width: clamp(100px, 25vw, 300px);
+    padding: 0.7rem 1rem 0.7rem 2.2rem;
+    font-size: clamp(0.9rem, 1.4vw, 1rem);
+    transition: transform 50ms ease, color 0.15s;
 }
 .search:hover {
     border: solid 2px rgb(37, 99, 235);
@@ -80,19 +84,18 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 15px;
+    padding: 0.6rem 1rem;
     background-color: rgb(225, 225, 225);
     border: solid 2px rgb(21, 28, 43);
     border-radius: 8px;
-    width: 25%;
+    width: clamp(90px, 20vw, 150px);
     height: 80%;
     cursor: pointer;
     transition: 50ms;
     transition: transform 50ms ease;
 }
 #cart-ico {
-    width: 20px;
-    height: 20px;
+    width: clamp(18px, 2vw, 22px);
 }
 .cart-btn:hover {
     border: solid 2px rgb(37, 99, 235);
@@ -106,17 +109,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: clamp(10px, 2vw, 20px);
     height: 80%;
-    width: 20%;
+    width: clamp(100px, 20vw, 300px);
+    flex: 1.5;
 }
 .login,
 .sign-in {
     background-color: rgb(225, 225, 225);
     border: solid 2px rgb(21, 28, 43);
     border-radius: 8px;
-    width: 40%;
+    width: clamp(100px, 9vw, 200px);
     height: 80%;
+    font-size: clamp(0.8rem, 1vw, 1rem);
     cursor: pointer;
     transition: 50ms;
     transition: transform 50ms ease;
@@ -130,4 +135,56 @@
 .login:active,
 .sign-in:active {
     transform: scale(0.90);
+}
+
+@media (max-width: 1256px) {
+    .search {
+        width: 150px;
+    }
+    .header-nav > a {
+        font-size: clamp(0.6rem, 0.8vw, 1rem);
+    }
+}
+
+@media (max-width: 1020px) {
+    .header-main {
+        padding: 3rem;
+        height: auto;
+        gap: 10px;
+    }
+    .header-nav,
+    .header-actions,
+    .header-access {
+        flex-direction: column;
+        height: 100px;
+        width: 100%;
+    }
+    .header-nav > a {
+        font-size: clamp(0.8rem, 0.9vw, 1rem);
+    }
+    .search,
+    .cart-btn,
+    .login,
+    .sign-in {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .header-main {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+        gap: 10px;
+    }
+    .header-nav,
+    .header-actions,
+    .header-access {
+        flex-direction: column;
+        width: 100%;
+    }
+    .search {
+        max-width: 100%;
+    }
 }
