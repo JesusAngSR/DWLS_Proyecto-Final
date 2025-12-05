@@ -4,13 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurador - TechStore</title>
-
+    <!-- Estilos generales -->
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/components/header/header.css">
-
+    <!-- Estilo local de la pagina -->
+    <link rel="stylesheet" href="/css/configurador.css">
+    <!-- Scripts generales -->
     <script src="/components/header/insert-header.js" defer></script>
+    <!-- Scripts locales de la pagina -->
+     <script src="/js/configurador.js" defer></script>
 </head>
 <body>
     <div include-html="/components/header/index.html"></div>
+    <main>
+        <section class="page-title-container">
+            <h1>Configurador Inteligente</h1>
+            <p>Arma tu PC paso a paso con compatibilidad automática</p>
+        </section>
+        <section class="box-container">
+            <div class="component-selection">
+                <div class="component-selection-title">
+                    <h2>Selecciona tus componentes</h2>
+                </div>
+                <div class="component-selection-elements">
+                    <div class="component-selection-element">
+                        <h3>Placa Madre</h3>
+                    </div>
+                    <div class="component-selection-element">
+                        <h3>Procesador</h3>
+                    </div>
+                    <div class="component-selection-element">
+                        <h3>Tarjeta Gráfica</h3>
+                    </div>
+                    <div class="component-selection-element">
+                        <h3>Memoria RAM</h3>
+                    </div>
+                    <div class="component-selection-element">
+                        <h3>Almacenamiento</h3>
+                    </div>
+                    <div class="component-selection-element">
+                        <h3>Fuente De Poder</h3>
+                    </div>
+                    <button class="start-setup-btn"><strong>Comenzar Configuracion</strong></button>
+                </div>
+            </div>
+            <div class="build-summary">
+                <div class="build-summary-elements">
+                    <h2>Resumen de tu Build</h>
+                    <div class="summary-row" id="summary-row-first-element">
+                        <span>Placa Madre</span>
+                        <span class="selection" id="mb-result">No seleccionado</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Procesador</span>
+                        <span class="selection" id="cpu-result">No seleccionado</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tarjeta Gráfica</span>
+                        <span class="selection" id="gpu-result">No seleccionado</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Memoria RAM</span>
+                        <span class="selection" id="ram-result">No seleccionado</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Almacenamiento</span>
+                        <span class="selection" id="storage-result">No seleccionado</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Fuente De Poder</span>
+                        <span class="selection" id="psu-result">No seleccionado</span>
+                    </div>
+                </div>
+                <div class="estimated-total">
+                    <span><strong>Total estimado:</strong></span>
+                    <span id="price"><strong>$0</strong></span>
+                </div>
+                <div class="pcs-img" id="pc-image">
+                    <!-- Imagen generada desde JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

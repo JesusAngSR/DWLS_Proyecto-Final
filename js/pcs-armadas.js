@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             name: "TechStarter 12400",
             category: "entry",
-            price: 649000,
-            image: "https://img.pccomponentes.com/pcbox/articulos/1000/1000504-pcs-armadas-entrada.jpg",
+            price: "12,000",
+            image: "https://zttbuilds.com/cdn/shop/files/1-Red.png?v=1762807799&width=5625",
             specs: [
                 "Intel i3-12100F",
                 "RTX 3050 6GB",
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             name: "Gamer Pro Ryzen 5600",
             category: "mid",
-            price: 989000,
-            image: "https://img.pccomponentes.com/pcbox/articulos/1000/1000506-pcs-armadas-media.jpg",
+            price: "18,000",
+            image: "https://zttbuilds.com/cdn/shop/files/fa9aa8b9-125a99_46ffa7d3e1784325aa7653bf0d8babc9_mv2.png?v=1756779068&width=5760",
             specs: [
                 "Ryzen 5 5600X",
                 "RTX 3060 12GB",
@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             name: "Beast RTX 4070 Ti",
             category: "high",
-            price: 1799000,
-            image: "https://img.pccomponentes.com/pcbox/articulos/1000/1000508-pcs-armadas-alta.jpg",
+            price: "37,999",
+            image: "https://zttbuilds.com/cdn/shop/files/1_77dc41e1-bf3b-4820-9369-36c3310a6695.png?v=1760222163&width=5760",
             specs: [
                 "Ryzen 7 7800X3D",
                 "RTX 4070 Ti 12GB",
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 4,
             name: "Ultra Titan 4090",
             category: "ultra",
-            price: 3899000,
-            image: "https://img.pccomponentes.com/pcbox/articulos/1000/1000510-pcs-armadas-ultra.jpg",
+            price: "55,000",
+            image: "https://zttbuilds.com/cdn/shop/files/1-2.png?v=1762374908&width=5760",
             specs: [
                 "Intel i9-14900K",
                 "RTX 4090 24GB",

@@ -7,10 +7,52 @@
 
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/components/header/header.css">
+    <link rel="stylesheet" href="/css/soporte.css"> <!-- Nuevo CSS -->
 
     <script src="/components/header/insert-header.js" defer></script>
+    <script src="/js/soporte.js" defer></script> <!-- JS separado -->
 </head>
 <body>
     <div include-html="/components/header/index.html"></div>
+
+    <main class="soporte-container">
+        <h1>Centro de Soporte TechStore</h1>
+        <p class="subtitle">Estamos aquí para ayudarte. Elige la opción que prefieras:</p>
+
+        <div class="soporte-grid">
+            <!-- Número de soporte -->
+            <div class="telefono-soporte">
+                <h2>Llámanos</h2>
+                <div class="numero">900 123 456</div>
+                <p>Llamada gratuita</p>
+                <div class="horario">
+                    Lunes a Viernes: 8:00 - 20:00<br>
+                    Sábado: 9:00 - 14:00
+                </div>
+                <a href="tel:900123456" class="btn-llamar">Llamar ahora</a>
+            </div>
+
+            <!-- Chat en vivo -->
+            <div class="chat-soporte">
+                <div class="chat-header">
+                    Chat en Vivo - TechStore
+                </div>
+                <div class="chat-body" id="chatBody">
+                    <div class="mensaje-bienvenida">
+                        ¡Hola! Bienvenido al soporte de TechStore.<br>
+                        ¿En qué podemos ayudarte hoy?
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <input 
+                        type="text" 
+                        class="chat-input" 
+                        placeholder="Escribe tu mensaje..." 
+                        id="mensajeInput"
+                    >
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

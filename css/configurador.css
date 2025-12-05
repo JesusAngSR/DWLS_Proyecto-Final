@@ -1,0 +1,136 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - clamp(50px, 8vh, 70px));
+    background: rgb(17, 24, 39);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.page-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: clamp(1rem, 3vh, 3rem);
+    padding-block: clamp(1rem, 4vh, 3rem);
+    gap: clamp(1rem, 2vh, 2rem);
+}
+.page-title-container > h1 {
+    font-size: clamp(1.5rem, 4vw, 4rem);
+}
+.page-title-container > p {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: min(90vw, 1200px);
+    margin: clamp(1rem, 3vh, 3rem);
+    background: rgb(31, 41, 55);
+    border-radius: 15px;
+    padding: clamp(1rem, 3vh, 3rem);
+    gap: clamp(1rem, 3vw, 4rem);
+}
+
+.component-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.component-selection-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: clamp(0.5rem, 2vh, 3rem);
+}
+.component-selection-title > h2 {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+.component-selection-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.6rem, 2vh, 3rem);
+    width: 100%;
+}
+.component-selection-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(55, 65, 81);
+    border-radius: 10px;
+    width: 100%;
+    padding: clamp(0.8rem, 2vh, 2rem);
+}
+
+.build-summary {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: rgb(55, 65, 81);
+    border-radius: 10px;
+    padding: clamp(1rem, 3vh, 3rem);
+}
+.build-summary-elements {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, 1.5vh, 1.5rem);
+}
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.3rem 0;
+    font-size: clamp(1rem, 2vh, 1.5rem);
+    font-weight: lighter;
+    color: rgb(140, 150, 170);
+}
+.selection {
+    color: rgb(255, 255, 255);
+}
+#summary-row-first-element {
+    margin-top: clamp(1rem, 2vh, 2rem);
+}
+
+.start-setup-btn {
+    background: rgb(250, 204, 21);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: clamp(0.8rem, 2vh, 2rem);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 1vw, 2rem);
+    color: rgb(14, 22, 39);
+}
+.estimated-total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: clamp(1.2rem, 2.3vw, 2rem);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-top: solid 2px rgb(75, 85, 99);
+    padding-top: clamp(1rem, 2vh, 2rem);
+}
+#price {
+    color: rgb(250, 204, 34);
+}
+.pcs-img {
+    padding: clamp(1rem, 2vh, 2rem);
+    background: rgb(255, 255, 255);
+    border: solid 5px rgb(31, 41, 55);
+    border-radius: 10px;
+}
