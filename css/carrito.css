@@ -1,0 +1,157 @@
+/* Estilo de fondo de la página */
+body {
+    background-color: #f9f9f9;
+}
+
+/* Contenedor principal del contenido del carrito */
+main {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Título principal de la página */
+.title-page {
+    color: rgb(37, 99, 235);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Total del carrito */
+h2#total {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: rgb(21, 28, 43);
+}
+
+/* Contenedor de todos los productos */
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Estilo de cada producto en el carrito */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 2px solid rgb(200,200,200);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover en el producto */
+.product:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Imagen del producto */
+.product img {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Nombre del producto */
+.product h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: rgb(37, 99, 235);
+}
+
+/* Descripción del producto */
+.product p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: rgb(50,50,50);
+    flex: 1;
+}
+
+/* Precio del producto */
+.product .price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(21, 28, 43);
+    margin-right: 15px;
+}
+
+/* Estilo de botones de eliminar y "Ver carrito" */
+.product button,
+.go-cart {
+    background-color: rgb(37, 99, 235);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+    text-decoration: none;
+}
+
+/* Efecto hover en botones */
+.product button:hover,
+.go-cart:hover {
+    background-color: rgb(21, 28, 43);
+    transform: scale(1.05);
+}
+
+/* Efecto activo (click) en botones */
+.product button:active,
+.go-cart:active {
+    transform: scale(0.95);
+}
+
+/* Link "Volver a la tienda" */
+.go-cart {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+/* Mensaje de carrito vacío */
+#cart-container p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(100, 100, 100);
+}
+
+/* Ajustes responsive para móviles */
+@media (max-width: 600px) {
+    /* Productos apilados verticalmente */
+    .product {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Ajuste de imagen en móviles */
+    .product img {
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    /* Ajuste de precio en móviles */
+    .product .price {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Contenedor del carrito ocupa casi todo el ancho */
+    #cart-container {
+        width: 95%;
+    }
+}

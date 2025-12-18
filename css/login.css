@@ -1,5 +1,4 @@
-/* /css/login.css */
-
+/* Reset y fondo principal */
 body {
   margin: 0;
   padding: 0;
@@ -8,14 +7,14 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Contenedor principal que mantiene el header arriba y centra el login */
+/* Contenedor principal login */
 .login-page-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Área donde se centra la caja */
+/* Área central del contenido */
 .login-content {
   flex: 1;
   display: flex;
@@ -24,6 +23,7 @@ body {
   padding: 20px;
 }
 
+/* Caja del formulario */
 .box {
   background: white;
   padding: 40px 50px;
@@ -35,17 +35,24 @@ body {
   animation: fadeIn 0.6s ease-out;
 }
 
+/* Animación de fadeIn */
+.box-sing-in-animation {
+  animation: fadeIn 0.4s ease forwards;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Título de la caja */
 .box h2 {
   margin: 0 0 30px;
   font-size: 2.2rem;
   color: #333;
 }
 
+/* Inputs del formulario */
 .box input {
   width: 100%;
   padding: 14px 16px;
@@ -57,12 +64,14 @@ body {
   box-sizing: border-box;
 }
 
+/* Input enfocado */
 .box input:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
 }
 
+/* Botón principal */
 .box button {
   width: 100%;
   padding: 14px;
@@ -77,10 +86,12 @@ body {
   transition: background 0.3s;
 }
 
+/* Botón hover */
 .box button:hover {
   background: #5a6fd8;
 }
 
+/* Toggle de cambiar entre login y registro */
 .toggle {
   margin-top: 20px;
   color: #667eea;
@@ -89,11 +100,12 @@ body {
   text-decoration: underline;
 }
 
+/* Toggle hover */
 .toggle:hover {
   color: #764ba2;
 }
 
-/* Responsive */
+/* Responsive menor a 480px */
 @media (max-width: 480px) {
   .box {
     padding: 30px 25px;

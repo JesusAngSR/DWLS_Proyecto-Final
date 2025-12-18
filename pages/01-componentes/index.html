@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración de codificación y viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la página de componentes -->
     <title>Componentes - TechStore</title>
 
+    <!-- Estilos generales del sitio -->
     <link rel="stylesheet" href="/css/default.css">
-    <link rel="stylesheet" href="/components/header/header.css">
 
-    <script src="/components/header/insert-header.js" defer></script>
+    <!-- Estilos del header -->
+    <link rel="stylesheet" href="/components/header/header.css">
+    
+    <!-- Estilos específicos para la página de componentes -->
+    <link rel="stylesheet" href="/css/componentes.css">
+    
+    <!-- Script del header - carga dinámica y eventos -->
+    <script src="/components/header/header.js" defer></script>
+
+    <!-- Script de la página de componentes -->
+    <script src="/js/componentes.js" defer></script>
 </head>
 <body>
+    <!-- Carga dinámica del header desde un archivo externo -->
     <div include-html="/components/header/index.html"></div>
+    <!-- Contenedor del título principal de la página -->
+    <div class="title-page-container">
+        <h1 class="title-page">Tienda de Componentes de Computadora</h1>
+    </div>
+    <!-- Contenedor donde se cargarán los productos dinámicamente -->
+    <div class="products-container" id="products"></div>
+
+    <!-- Enlace al carrito de compras -->
+    <a href="/pages/07-carrito/index.html" class="go-cart">
+        Ver carrito 🛒
+    </a>
 </body>
 </html>
+

@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración de codificación y viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStore</title>
 
+    <!-- Título de la página principal -->
+    <title>TechStore - Tu PC perfecto a un clic</title>
+
+    <!-- Estilos generales del sitio -->
     <link rel="stylesheet" href="/css/default.css">
+
+    <!-- Estilos del header -->
     <link rel="stylesheet" href="/components/header/header.css">
 
-    <script src="/components/header/insert-header.js" defer></script>
+    <!-- Estilos específicos de la página de inicio -->
+    <link rel="stylesheet" href="/css/home.css">
+
+    <!-- Script del header - carga dinámica y eventos -->
+    <script src="/components/header/header.js" defer></script>
+
+    <!-- Script de la página de inicio -->
+    <script src="/js/home.js" defer></script>
 </head>
 <body>
+    <!-- Carga dinámica del header desde un archivo externo -->
     <div include-html="/components/header/index.html"></div>
+
+    <!-- Sección principal hero de bienvenida -->
+    <section class="hero">
+        <h1>TechStore</h1>
+        <p>Configura tu PC a medida, elige componentes de última generación o llévate uno ya armado.</p>
+    </section>
+
+    <!-- Contenedor de tarjetas con enlaces a secciones importantes -->
+    <section class="cards-container">
+        <!-- Tarjeta del configurador de PCs -->
+        <a href="/pages/03-configurador/index.html" class="card">
+            <img src="https://t4.ftcdn.net/jpg/00/65/77/21/240_F_65772192_jm8MYL39Bp5pp90KlyGWrRgErYa70lZZ.jpg">
+            <div class="card-content">
+                <h3>Configurador de PCs</h3>
+                <p>Elige cada componente y ve el precio y la compatibilidad en tiempo real.</p>
+            </div>
+        </a>
+        <!-- Tarjeta del catálogo de componentes -->
+        <a href="/pages/01-componentes/index.html" class="card">
+            <img src="https://imgs.search.brave.com/HKU9GBhMDrNr6ae-OBbYYHSPTUa2yOOStFm9hGy-fPs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDEv/NDg2LzQxMS9zbWFs/bC9vcGVuLWJvb2st/aWNvbi1mcmVlLXZl/Y3Rvci5qcGc" alt="Componentes">
+            <div class="card-content">
+                <h3>Catálogo de Componentes</h3>
+                <p>Tarjetas gráficas, procesadores, placas base, RAM… todo con stock real.</p>
+            </div>
+        </a>
+        <!-- Tarjeta de PCs ya armadas -->
+        <a href="/pages/02-pcs-armadas/index.html" class="card">
+            <img src="https://imgs.search.brave.com/4m9DXpsJwb9IGSsoXFM4XgaWC1i4bmJunvVKrIrzNR8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjEv/MTMwLzg1Ny9zbWFs/bC9wYy1pY29uLXZl/Y3Rvci5qcGc">
+            <div class="card-content">
+                <h3>PCs ya Armadas</h3>
+                <p>Gaming, edición de vídeo, ofimática… listos para enviar en 48-72h.</p>
+            </div>
+        </a>
+    </section>
 </body>
 </html>

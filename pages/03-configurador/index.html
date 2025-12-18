@@ -4,87 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurador - TechStore</title>
+    
     <!-- Estilos generales -->
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/components/header/header.css">
-    <!-- Estilo local de la pagina -->
-    <link rel="stylesheet" href="/css/configurador.css">
+    
+    <!-- Estilos locales de la página -->
+    <link rel="stylesheet" href="/css/03-configurador/main.css">
+    <link rel="stylesheet" href="/css/03-configurador/modal.css">
+    
+    <!-- Estilos web externos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://icons.getbootstrap.com/icons/motherboard/">
+    
     <!-- Scripts generales -->
-    <script src="/components/header/insert-header.js" defer></script>
-    <!-- Scripts locales de la pagina -->
-     <script src="/js/configurador.js" defer></script>
+    <script src="/components/header/header.js" defer></script>
+    
+    <!-- Scripts locales -->
+    <script src="/js/configurador.js" defer></script>
 </head>
 <body>
+    <!-- Header incluido -->
     <div include-html="/components/header/index.html"></div>
+
+    <!-- Contenido principal del configurador -->
     <main>
+        <!-- Título de la página -->
         <section class="page-title-container">
             <h1>Configurador Inteligente</h1>
             <p>Arma tu PC paso a paso con compatibilidad automática</p>
         </section>
+
         <section class="box-container">
+            <!-- Selección de componentes -->
             <div class="component-selection">
                 <div class="component-selection-title">
                     <h2>Selecciona tus componentes</h2>
                 </div>
                 <div class="component-selection-elements">
-                    <div class="component-selection-element">
-                        <h3>Placa Madre</h3>
+                    <!-- Elemento placa madre -->
+                    <div class="component-selection-element" data-type="motherboard" data-name="placa madre" 
+                    onclick="openModal(this.dataset.type, this.dataset.name)">
+                        <i class="bi bi-motherboard ico-selection-element"></i>
+                        <div class="selection-elements">
+                            <div class="selection-elements-text">
+                                <h3>Placa Madre</h3>
+                                <p>Selecciona tu MotherBoard</p>
+                            </div>
+                            <button class="selection-elements-btn">Elegir</button>
+                        </div>
                     </div>
-                    <div class="component-selection-element">
-                        <h3>Procesador</h3>
+
+                    <!-- Elemento procesador -->
+                    <div class="component-selection-element" data-type="cpu" data-name="procesador" 
+                    onclick="openModal(this.dataset.type, this.dataset.name)">
+                        <i class="bi bi-cpu ico-selection-element"></i>
+                        <div class="selection-elements">
+                            <div class="selection-elements-text">
+                                <h3>Procesador</h3>
+                                <p>Selecciona tu CPU</p>
+                            </div>
+                            <button class="selection-elements-btn">Elegir</button>
+                        </div>
                     </div>
-                    <div class="component-selection-element">
-                        <h3>Tarjeta Gráfica</h3>
+
+                    <!-- Elemento tarjeta gráfica -->
+                    <div class="component-selection-element" data-type="gpu" data-name="tarjeta de video" 
+                    onclick="openModal(this.dataset.type, this.dataset.name)">
+                        <i class="bi bi-gpu-card ico-selection-element"></i>
+                        <div class="selection-elements">
+                            <div class="selection-elements-text">
+                                <h3>Tarjeta Gráfica</h3>
+                                <p>Selecciona tu GPU</p>
+                            </div>
+                            <button class="selection-elements-btn">Elegir</button>
+                        </div>
                     </div>
-                    <div class="component-selection-element">
-                        <h3>Memoria RAM</h3>
+
+                    <!-- Elemento RAM -->
+                    <div class="component-selection-element" data-type="ram" data-name="memoria ram" 
+                    onclick="openModal(this.dataset.type, this.dataset.name)">
+                        <i class="bi bi-memory ico-selection-element"></i>
+                        <div class="selection-elements">
+                            <div class="selection-elements-text">
+                                <h3>Memoria RAM</h3>
+                                <p>Selecciona tu RAM</p>
+                            </div>
+                            <button class="selection-elements-btn">Elegir</button>
+                        </div>
                     </div>
-                    <div class="component-selection-element">
-                        <h3>Almacenamiento</h3>
+
+                    <!-- Elemento almacenamiento -->
+                    <div class="component-selection-element" data-type="storage" data-name="almacenamiento" 
+                    onclick="openModal(this.dataset.type, this.dataset.name)">
+                        <i class="bi bi-hdd ico-selection-element"></i>
+                        <div class="selection-elements">
+                            <div class="selection-elements-text">
+                                <h3>Almacenamiento</h3>
+                                <p>Selecciona tu HDD o SSD</p>
+                            </div>
+                            <button class="selection-elements-btn">Elegir</button>
+                        </div>
                     </div>
-                    <div class="component-selection-element">
-                        <h3>Fuente De Poder</h3>
+
+                    <!-- Elemento fuente de poder -->
+                    <div class="component-selection-element" data-type="psu" data-name="fuente de poder" 
+                    onclick="openModal(this.dataset.type, this.dataset.name)">
+                        <i class="fas fa-bolt ico-selection-element"></i>
+                        <div class="selection-elements">
+                            <div class="selection-elements-text">
+                                <h3>Fuente De Poder</h3>
+                                <p>Selecciona tu PSU</p>
+                            </div>
+                            <button class="selection-elements-btn">Elegir</button>
+                        </div>
                     </div>
-                    <button class="start-setup-btn"><strong>Comenzar Configuracion</strong></button>
+
+                    <!-- Botón calcular configuración -->
+                    <button class="start-setup-btn">
+                        <span><img class="start-setup-btn-icon" src="/assets/icons/settings-icon.png" alt="settings-icon"></span>
+                        <strong>Calcular Configuracion</strong>
+                    </button>
                 </div>
             </div>
-            <div class="build-summary">
-                <div class="build-summary-elements">
-                    <h2>Resumen de tu Build</h>
-                    <div class="summary-row" id="summary-row-first-element">
-                        <span>Placa Madre</span>
-                        <span class="selection" id="mb-result">No seleccionado</span>
+
+            <!-- Resumen de la build -->
+            <div class="build-summary-container">
+                <div class="build-summary">
+                    <div class="build-summary-elements">
+                        <h2 id="summary-title">Resumen de tu Build</h2>
+                        <div class="summary-row" id="summary-row-first-element">
+                            <span>Placa Madre:</span>
+                            <span class="selection" id="mb-result">No seleccionado</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Procesador:</span>
+                            <span class="selection" id="cpu-result">No seleccionado</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tarjeta Gráfica:</span>
+                            <span class="selection" id="gpu-result">No seleccionado</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Memoria RAM:</span>
+                            <span class="selection" id="ram-result">No seleccionado</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Almacenamiento:</span>
+                            <span class="selection" id="storage-result">No seleccionado</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Fuente De Poder:</span>
+                            <span class="selection" id="psu-result">No seleccionado</span>
+                        </div>
                     </div>
-                    <div class="summary-row">
-                        <span>Procesador</span>
-                        <span class="selection" id="cpu-result">No seleccionado</span>
+
+                    <!-- Total estimado -->
+                    <div class="estimated-total">
+                        <span><strong>Total estimado:</strong></span>
+                        <span id="price"><strong>$0</strong></span>
                     </div>
-                    <div class="summary-row">
-                        <span>Tarjeta Gráfica</span>
-                        <span class="selection" id="gpu-result">No seleccionado</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Memoria RAM</span>
-                        <span class="selection" id="ram-result">No seleccionado</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Almacenamiento</span>
-                        <span class="selection" id="storage-result">No seleccionado</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Fuente De Poder</span>
-                        <span class="selection" id="psu-result">No seleccionado</span>
+
+                    <!-- Imagen del PC configurado -->
+                    <div class="components-img-container">
+                        <div class="pcs-img">
+                            <div class="pcs-img-inner" id="pc-image">
+                                <!-- Imagen generada desde JavaScript -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="estimated-total">
-                    <span><strong>Total estimado:</strong></span>
-                    <span id="price"><strong>$0</strong></span>
-                </div>
-                <div class="pcs-img" id="pc-image">
-                    <!-- Imagen generada desde JavaScript -->
+
+                <!-- Botón añadir al carrito -->
+                <div class="carrt-btn-page-container">
+                    <button class="carrt-btn-page">
+                        <img src="https://img.icons8.com/ios-filled/50/shopping-cart.png" alt="carrito" id="cart-ico">
+                        <span>Añadir al Carrito</span>
+                    </button>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Modal de selección de componentes -->
+    <div id="component-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3 id="modal-title">Selecciona un componente</h3>
+            <div id="modal-options" class="modal-options"></div>
+        </div>
+    </div>
 </body>
 </html>

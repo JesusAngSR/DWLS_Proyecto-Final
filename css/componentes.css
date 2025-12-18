@@ -1,0 +1,92 @@
+/* Reseteo y box-sizing */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos generales del body */
+body {
+    margin: 0;
+    background: #f2f2f2;
+}
+
+/* Contenedor del título de la página */
+.title-page-container {
+    margin-top: 20px;
+}
+
+/* Título de la página */
+.title-page {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de productos en grilla */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Tarjeta de producto */
+.product {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+/* Imagen del producto */
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Nombre del producto */
+.product h3 {
+    margin: 10px 0 5px;
+}
+
+/* Especificaciones del producto */
+.product p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Precio del producto */
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Botón para agregar al carrito */
+.cart-btn-page {
+    background: #0d6efd;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efecto hover del botón */
+.cart-btn-page:hover {
+    background: #084298;
+}
+
+/* Botón para ir al carrito */
+.go-cart {
+    display: block;
+    margin: 30px auto;
+    width: fit-content;
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+

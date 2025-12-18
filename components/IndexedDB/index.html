@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de codificación y viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la página -->
+    <title>Exportar Usuarios - TechStore</title>
+
+    <!-- Estilos generales del sitio -->
+    <link rel="stylesheet" href="/css/default.css">
+
+    <!-- Estilos del header -->
+    <link rel="stylesheet" href="/components/header/header.css">
+
+    <!-- Estilos específicos de la sección IndexedDB -->
+    <link rel="stylesheet" href="/components/IndexedDB/indexedDB.css">
+
+    <!-- Script del header - carga dinámica y eventos -->
+    <script src="/components/header/header.js" defer></script>
+
+    <!-- Script de IndexedDB - funcionalidad de exportar usuarios -->
+    <script src="/components/IndexedDB/indexedDB.js" defer></script>
+</head>
+<body>
+    <!-- Carga dinámica del header desde un archivo externo -->
+    <div include-html="/components/header/index.html"></div>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Contenedor del botón de exportación de usuarios -->
+        <div class="export-Btn-box">
+            <!-- Botón que dispara la exportación de usuarios -->
+            <button id="export-Btn">Exportar Usuarios</button>
+        </div>
+    </main>
+</body>
+</html>

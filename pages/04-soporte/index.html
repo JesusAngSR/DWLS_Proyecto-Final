@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soporte - TechStore</title>
 
+    <!-- Estilos generales y específicos -->
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/components/header/header.css">
-    <link rel="stylesheet" href="/css/soporte.css"> <!-- Nuevo CSS -->
+    <link rel="stylesheet" href="/css/soporte.css"> <!-- CSS de soporte -->
 
-    <script src="/components/header/insert-header.js" defer></script>
-    <script src="/js/soporte.js" defer></script> <!-- JS separado -->
+    <!-- Scripts -->
+    <script src="/components/header/header.js" defer></script>
+    <script src="/js/soporte.js" defer></script> <!-- JS soporte -->
 </head>
 <body>
+    <!-- Header incluido -->
     <div include-html="/components/header/index.html"></div>
 
     <main class="soporte-container">
+        <!-- Título y subtítulo -->
         <h1>Centro de Soporte TechStore</h1>
         <p class="subtitle">Estamos aquí para ayudarte. Elige la opción que prefieras:</p>
 
         <div class="soporte-grid">
-            <!-- Número de soporte -->
+            <!-- Sección de teléfono -->
             <div class="telefono-soporte">
                 <h2>Llámanos</h2>
                 <div class="numero">900 123 456</div>
@@ -32,18 +36,20 @@
                 <a href="tel:900123456" class="btn-llamar">Llamar ahora</a>
             </div>
 
-            <!-- Chat en vivo -->
+            <!-- Sección de chat en vivo -->
             <div class="chat-soporte">
                 <div class="chat-header">
                     Chat en Vivo - TechStore
                 </div>
                 <div class="chat-body" id="chatBody">
+                    <!-- Mensaje de bienvenida -->
                     <div class="mensaje-bienvenida">
                         ¡Hola! Bienvenido al soporte de TechStore.<br>
                         ¿En qué podemos ayudarte hoy?
                     </div>
                 </div>
                 <div class="chat-footer">
+                    <!-- Input de chat -->
                     <input 
                         type="text" 
                         class="chat-input" 

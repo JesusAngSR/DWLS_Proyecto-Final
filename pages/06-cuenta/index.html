@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta / TechStore</title>
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/components/header/header.css">
+    <!-- Estilos locales -->
+    <link rel="stylesheet" href="/css/cuenta.css">
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Scripts -->
+    <script src="/components/header/header.js" defer></script>
+    <script src="/js/cuenta.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <div include-html="/components/header/index.html"></div>
+    <!-- Contenido principal -->
+    <main>
+        <div class="box-page">
+            <!-- Información de la cuenta -->
+            <section class="account-info">
+                <div class="account-icon-container">
+                    <i class="bi bi-person-fill account-icon"></i>
+                </div>
+                <div class="account-text">
+                    <span id="user-name">Nombre de usuario: </span>
+                    <span id="user-email">Correo electrónico: </span>
+                </div>
+            </section>
+            <!-- Botones de la cuenta -->
+            <section class="account-buttons">
+                <button id="config-btn">Configuración</button>
+                <button id="logout-btn">Cerrar Sesión</button>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

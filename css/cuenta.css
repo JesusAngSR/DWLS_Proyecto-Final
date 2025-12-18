@@ -1,0 +1,166 @@
+/* Contenedores principales */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(240, 240, 240);
+}
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25px 10px;
+}
+
+/* Caja principal de la cuenta */
+.box-page {
+    width: 90%;
+    max-width: 700px;
+    min-width: 280px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+/* Información del usuario */
+.account-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    min-height: 180px;
+}
+.account-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+    text-align: start;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Icono de usuario */
+.account-icon-container {
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: solid 1px rgb(150, 150, 150);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+.account-icon {
+    font-size: 96px;
+    margin: 20px;
+    color: rgb(150, 150, 150);
+}
+
+/* Botones de acción */
+.account-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.account-buttons button,
+#config-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(46, 101, 189);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    transition: transform 100ms ease, background-color 200ms;
+    flex: 1 1 120px;
+    min-width: 120px;
+}
+
+#logout-btn {
+    background-color: rgb(225, 10, 10);
+}
+
+#config-btn:hover { background-color: rgb(18, 60, 119); }
+#logout-btn:hover { background-color: rgb(180, 8, 8); }
+.account-buttons button:hover {
+    transform: scale(1.05);
+}
+.account-buttons button:active {
+    transform: scale(0.95);
+}
+
+/* Media menores a 480px */
+@media (max-width: 480px) {
+    .box-page {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .account-icon-container {
+        height: 100px;
+        width: 100px;
+        font-size: 3rem;
+    }
+
+    .account-text {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    .account-buttons button {
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
+}
+
+/* Media entre 481px y 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .box-page {
+        width: 95%;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .account-icon-container {
+        height: 110px;
+        width: 110px;
+        font-size: 3.5rem;
+    }
+    .account-text {
+        text-align: center;
+    }
+}
+
+/* Media menores a 480px (ajuste extra) */
+@media (max-width: 480px) {
+    .box-page {
+        width: 90vw;
+        min-width: 180px;
+        max-width: 300px;
+        padding: 10px;
+    }
+    .account-text {
+        text-align: center;
+    }
+}

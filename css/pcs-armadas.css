@@ -1,4 +1,4 @@
-/* pages/02-pcs-armadas/pcs-armadas.css */
+/* Contenedor principal de PCs Armadas */
 .pcs-armadas-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -6,23 +6,27 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* Hero section */
 .hero-section {
     text-align: center;
     margin-bottom: 3rem;
     padding: 2rem;
 }
 
+/* Título hero */
 .hero-section h1 {
     font-size: 2.8rem;
     color: #2c3e50;
     margin-bottom: 1rem;
 }
 
+/* Texto hero */
 .hero-section p {
     font-size: 1.2rem;
     color: #555;
 }
 
+/* Barra de filtros */
 .filter-bar {
     display: flex;
     justify-content: center;
@@ -31,6 +35,7 @@
     margin-bottom: 3rem;
 }
 
+/* Botones de filtro */
 .filter-btn {
     padding: 0.8rem 1.5rem;
     border: 2px solid #3498db;
@@ -42,18 +47,21 @@
     font-weight: 600;
 }
 
+/* Botón activo o hover */
 .filter-btn.active,
 .filter-btn:hover {
     background: #3498db;
     color: white;
 }
 
+/* Grilla de PCs */
 .pcs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2rem;
 }
 
+/* Card individual de PC */
 .pc-card {
     background: white;
     border-radius: 16px;
@@ -62,22 +70,26 @@
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Hover en card */
 .pc-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     border: solid 2px #3498db;
 }
 
+/* Imagen de la PC */
 .pc-image {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
 
+/* Info de la PC */
 .pc-info {
     padding: 1.5rem;
 }
 
+/* Badge de categoría */
 .pc-badge {
     display: inline-block;
     padding: 0.4rem 1rem;
@@ -87,17 +99,20 @@
     margin-bottom: 1rem;
 }
 
+/* Colores de badges */
 .badge-entry { background: #27ae60; color: white; }
 .badge-mid { background: #f39c12; color: white; }
 .badge-high { background: #e74c3c; color: white; }
 .badge-ultra { background: #9b59b6; color: white; }
 
+/* Nombre de la PC */
 .pc-name {
     font-size: 1.5rem;
     margin: 0.5rem 0;
     color: #2c3e50;
 }
 
+/* Lista de especificaciones */
 .pc-specs {
     list-style: none;
     padding: 0;
@@ -106,19 +121,23 @@
     font-size: 0.95rem;
 }
 
+/* Items de la lista de specs */
 .pc-specs li {
     padding: 0.4rem 0;
     border-bottom: 1px solid #eee;
 }
 
+/* Último item sin borde */
 .pc-specs li:last-child {
     border-bottom: none;
 }
 
+/* Destacar texto en specs */
 .pc-specs strong {
     color: #2c3e50;
 }
 
+/* Precio de la PC */
 .pc-price {
     font-size: 2rem;
     font-weight: bold;
@@ -126,6 +145,7 @@
     margin: 1rem 0;
 }
 
+/* Botón agregar al carrito */
 .btn-add-cart {
     width: 100%;
     padding: 1rem;
@@ -139,11 +159,37 @@
     transition: background 0.3s;
 }
 
+/* Hover en botón agregar */
 .btn-add-cart:hover {
     background: #2980b9;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .hero-section h1 { font-size: 2.2rem; }
     .pcs-grid { grid-template-columns: 1fr; }
+}
+
+/* Botón ir al carrito */
+.btn-go-cart {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: rgb(37, 99, 235);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+/* Hover en botón carrito */
+.btn-go-cart:hover {
+    background-color: rgb(21, 28, 43);
+    transform: scale(1.05);
+}
+
+/* Active botón carrito */
+.btn-go-cart:active {
+    transform: scale(0.95);
 }

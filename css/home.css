@@ -1,0 +1,99 @@
+/* Variables de colores del tema */
+:root {
+    --primary: hsl(245, 94%, 43%);
+    --dark: #ffffff;
+    --gray: #ffffff;
+    --light-gray: #000000;
+}
+
+/* Estilo global del body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--dark);
+    color: white;
+}
+
+/* Sección hero de bienvenida */
+.hero {
+    text-align: center;
+    padding: 100px 20px 80px;
+    background: linear-gradient(rgb(113, 112, 112), rgba(155, 152, 152, 0.9)),
+                url('https://imgs.search.brave.com/Wf8HmpECNesJzAluN66PN_Kw8V7cAXhn9ES2W7180jA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ2/NDE0Nzc0Ny92ZWN0/b3IvZ2FtaW5nLXBj/LWNvbXB1dGVyLWds/b3dpbmctaW4tZGFy/ay1pc29tZXRyaWMt/aWxsdXN0cmF0aW9u/LW9mLW1vZGVybi1j/b21wdXRlci1jYXNl/LW1vbml0b3IuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPXA3/dUV3M1VJOGd0Ykpp/cVRFQUs0RlFsR2lY/dmlhaG9tS1B2aTIt/V21za0k9') center/cover no-repeat;
+}
+
+/* Título principal en la sección hero con efecto gradiente */
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0 0 20px;
+    background: linear-gradient(90deg, #0800fe, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Texto descriptivo en hero */
+.hero p {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--light-gray);
+}
+
+/* Contenedor de tarjetas de secciones importantes */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    padding: 50px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Estilo base de cada tarjeta */
+.card {
+    background: var(--gray);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    text-decoration: none;
+    color: white;
+}
+
+/* Efecto hover de las tarjetas */
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 68, 255, 0.3);
+}
+
+/* Imagen dentro de la tarjeta */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Contenido interno de la tarjeta */
+.card-content {
+    padding: 25px;
+}
+
+/* Título de la tarjeta */
+.card h3 {
+    margin: 0 0 15px;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+/* Descripción de la tarjeta */
+.card p {
+    margin: 0;
+    color: var(--light-gray);
+    line-height: 1.6;
+}
+
+/* Ajustes responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero { padding: 80px 20px 60px; }
+}

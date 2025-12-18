@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - TechStore</title>
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/components/header/header.css">
+    <link rel="stylesheet" href="/css/carrito.css">
+    <!-- Scripts -->
+    <script src="/components/header/header.js" defer></script>
+    <script src="/js/carrito.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <div include-html="/components/header/index.html"></div>
+    <main>
+        <!-- Título de la página -->
+        <h1 class="title-page">Carrito de Compras</h1>
+        <!-- Contenedor de productos en el carrito -->
+        <div id="cart-container"></div>
+        <!-- Total del carrito -->
+        <h2 id="total"></h2>
+        <!-- Botón de regreso a la tienda -->
+        <a href="/index.html" class="go-cart">Volver a la tienda</a>
+    </main>
+</body>
+</html>

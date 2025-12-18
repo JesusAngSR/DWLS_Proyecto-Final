@@ -1,3 +1,4 @@
+/* Main container de la página */
 main {
     display: flex;
     flex-direction: column;
@@ -9,6 +10,7 @@ main {
     color: white;
 }
 
+/* Contenedor del título de la página */
 .page-title-container {
     display: flex;
     flex-direction: column;
@@ -19,13 +21,16 @@ main {
     padding: 40px 0;
     gap: 20px;
 }
+/* Título principal */
 .page-title-container > h1 {
     font-size: 2.5rem;
 }
+/* Subtítulo principal */
 .page-title-container > p {
     font-size: 1.3rem;
 }
 
+/* Contenedor de los boxes de selección */
 .box-container {
     display: flex;
     flex-wrap: wrap;
@@ -38,21 +43,25 @@ main {
     gap: 40px;
 }
 
+/* Contenedor de selección de componentes */
 .component-selection {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
 }
+/* Título de la sección de selección */
 .component-selection-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 25px;
 }
+/* Título h2 de la sección */
 .component-selection-title > h2 {
     font-size: 1.6rem;
 }
+/* Contenedor de los elementos de selección */
 .component-selection-elements {
     display: flex;
     flex-direction: column;
@@ -61,6 +70,7 @@ main {
     gap: 25px;
     width: 100%;
 }
+/* Cada elemento de selección */
 .component-selection-element {
     display: flex;
     align-items: center;
@@ -72,12 +82,14 @@ main {
     gap: 20px;
     transition: transform 50ms ease, border-color 200ms, box-shadow 200ms;
 }
+/* Hover de elemento de selección */
 .component-selection-element:hover {
     border: solid 2px rgb(0, 165, 247);
     transform: scaleY(0.90);
     box-shadow: 0px 0px 10px 2px rgba(0, 165, 247, 0.4);
 }
 
+/* Iconos de los componentes */
 .ico-selection-element {
     display: flex;
     justify-content: center;
@@ -88,6 +100,7 @@ main {
     border: none;
     border-radius: 50%;
 }
+/* Colores por tipo de componente */
 .bi-motherboard {color: rgb(96, 243, 248);}
 .bi-cpu {color: rgb(96, 165, 250);}
 .bi-gpu-card {color: rgb(74, 222, 128);}
@@ -95,6 +108,7 @@ main {
 .bi-hdd {color: rgb(251, 146, 60);}
 .fa-bolt {color: rgb(255, 200, 0);}
 
+/* Contenedor de texto y botón de selección */
 .selection-elements {
     display: flex;
     justify-content: space-between;
@@ -102,16 +116,19 @@ main {
     width: 100%;
 }
 
+/* Contenedor de texto */
 .selection-elements-text {
     display: flex;
     flex-direction: column;
     gap: 8px;
     font-size: 1.1rem;
 }
+/* Párrafos del texto de selección */
 .selection-elements-text > p {
     font-size: 0.9rem;
     color: rgb(140, 150, 170);
 }
+/* Botón de selección */
 .selection-elements-btn {
     background: rgb(37, 99, 235);
     border: none;
@@ -126,15 +143,31 @@ main {
     color: white;
     transition: transform 100ms ease, background-color 100ms, box-shadow 100ms;
 }
+/* Hover del botón */
 .selection-elements-btn:hover {
     background-color: rgb(31, 80, 185);
     box-shadow: 5px 5px 2px 2px rgba(9, 9, 9, 0.1);
     transform: scaleY(1.10);
 }
+/* Estado activo del botón */
 .selection-elements-btn:active {
     background-color: rgb(0, 165, 247);
     transform: scale(0.90);
 }
+/* Botón ya seleccionado */
+.selected-selection-elements-btn {
+    background-color: rgb(14, 22, 39);
+    color: rgb(140, 150, 170);
+    cursor: default;
+}
+/* Hover botón seleccionado */
+.selected-selection-elements-btn:hover {
+    background-color: rgb(24, 34, 57);
+    color: rgb(140, 150, 170);
+    cursor: default;
+}
+
+/* Botón para calcular configuración */
 .start-setup-btn {
     background: rgb(250, 204, 21);
     display: flex;
@@ -150,22 +183,34 @@ main {
     color: rgb(14, 22, 39);
     transition: transform 100ms ease, background-color 100ms, box-shadow 100ms, border 100ms;
 }
+/* Hover botón calcular */
 .start-setup-btn:hover {
     border: solid 5px rgb(247, 177, 0);
     transform: scaleY(0.90);
     box-shadow: 0px 0px 10px 5px rgba(206, 136, 6, 0.4);
 }
+/* Estado activo del botón calcular */
 .start-setup-btn:active {
     background-color: rgb(255, 216, 118);
     border: solid 5px rgb(255, 216, 118);
     transform: scaleX(0.95) scaleY(0.80);
     box-shadow: 0px 0px 10px 5px rgba(255, 208, 120, 0.4);
 }
+/* Icono del botón calcular */
 .start-setup-btn-icon {
     height: 32px;
     width: 32px;
 }
 
+/* Contenedor del resumen del build */
+.build-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+/* Contenedor interno del resumen */
 .build-summary {
     display: flex;
     flex-direction: column;
@@ -173,13 +218,16 @@ main {
     background: rgb(55, 65, 81);
     border-radius: 10px;
     padding: 30px;
+    height: 70%;
+    width: 100%;
 }
+/* Elementos del resumen */
 .build-summary-elements {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
+/* Filas del resumen */
 .summary-row {
     display: flex;
     justify-content: space-between;
@@ -190,13 +238,28 @@ main {
     font-weight: lighter;
     color: rgb(140, 150, 170);
 }
+/* Texto seleccionado */
 .selection {
     color: white;
 }
+/* Margen superior de la primera fila */
 #summary-row-first-element {
     margin-top: 25px;
 }
 
+/* Mensaje de compatibilidad */
+#compatibility-msg {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: rgb(20, 130, 60);
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Contenedor de precio estimado */
 .estimated-total {
     display: flex;
     justify-content: space-between;
@@ -207,20 +270,23 @@ main {
     border-top: 2px solid rgb(75, 85, 99);
     padding-top: 20px;
 }
+/* Precio */
 #price {
     color: rgb(250, 204, 34);
 }
+
+/* Contenedor de imágenes de componentes */
 .components-img-container {
     display: flex;
     justify-content: center;
     height: 100%;
     width: 100%;
 }
-
+/* Contenedor principal de imágenes */
 .pcs-img {
     display: flex;
     gap: 12px;
-    height: 100%; 
+    height: 130px;
     width: 100%;
     background: rgb(255, 255, 255);
     border: 5px solid rgb(31, 41, 55);
@@ -228,15 +294,23 @@ main {
     overflow: hidden;
     position: relative;
 }
-
+/* Contenedor interno de imágenes */
 .pcs-img-inner {
     display: flex;
+    flex-direction: row;
     gap: 12px;
     height: 100%;
     width: 100%;
-    overflow: auto;  
-    padding-right: 12px; 
-    box-sizing: content-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+/* Imágenes dentro del contenedor */
+.pcs-img-inner img {
+    height: 100%;
+    width: 30%;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 /* Scroll personalizado WebKit */
 .pcs-img-inner::-webkit-scrollbar {
@@ -254,12 +328,8 @@ main {
 .pcs-img-inner::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-/* Scroll Firefox */
-.pcs-img-inner {
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f0f0f0;
-}
 
+/* Contenedor del botón de carrito */
 .carrt-btn-page-container {
     height: 100%;
     width: 100%;
@@ -267,6 +337,7 @@ main {
     align-items: center;
     justify-content: center;
 }
+/* Botón de carrito */
 .carrt-btn-page {
     background: rgb(200, 200, 200);
     display: flex;
@@ -296,59 +367,22 @@ main {
     border: solid 2px rgb(255, 255, 255);
 }
 
-/* menu emergente para selecionar componentes */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+.disabled-cart-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
-.modal-content {
-    background: rgb(31, 41, 55);
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px;
-    color: white;
-}
-.modal-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
-}
-.modal-options .option {
-    background: rgb(55, 65, 81);
-    border-radius: 8px;
-    padding: 10px;
-    flex: 1 1 calc(50% - 10px);
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.1s;
-}
-.modal-options .option:hover {
-    transform: scale(1.05);
-    background: rgb(75, 85, 99);
-}
-.modal-options img {
-    max-width: 100px;
-    margin-bottom: 10px;
-}
-.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
+.disabled-cart-btn:active {
+    background: rgb(200, 200, 200);
+    transform: scale(1);
 }
 
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
 
+/* Media query para pantallas menores a 1200px */
 @media (max-width: 1200px) {
     .box-container {
         gap: 30px;
@@ -359,17 +393,34 @@ main {
     }
 }
 
+/* Media query para pantallas menores a 992px */
+/* Móvil horizontal y tablets pequeñas */
 @media (max-width: 992px) {
     .box-container {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     .component-selection,
+    .build-summary-container {
+        width: 100%;
+        max-width: 100%;
+    }
     .build-summary {
         width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+    .carrt-btn-page-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
 }
 
+/* Media query para pantallas menores a 768px */
+/* Tablets vertical y móviles grandes */
 @media (max-width: 768px) {
     .page-title-container > h1 {
         font-size: 2rem;
@@ -377,13 +428,11 @@ main {
     .page-title-container > p {
         font-size: 1rem;
     }
-
     .component-selection-element {
         flex-direction: row;
         padding: 15px;
         gap: 15px;
     }
-
     .selection-elements-btn {
         width: 150px;
         height: 45px;
@@ -391,39 +440,30 @@ main {
         padding: 10px 20px;
         margin-top: 10px;
     }
-
     .ico-selection-element {
         height: 50px;
         width: 50px;
     }
-
     .estimated-total {
         font-size: 1.3rem;
     }
-}
-
-@media (max-width: 350px) {
-    .summary-row {
-        display: flex;
-        flex-direction: column;
-    }
-    .selection-elements-btn {
-        margin-top: 10px;
+    .carrt-btn-page {
+        width: 260px;
     }
 }
 
+/* Media query para pantallas menores a 480px */
+/* Móviles */
 @media (max-width: 480px) {
     .page-title-container {
         padding: 20px 0;
         margin: 20px 0;
     }
-
     .component-selection-element {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
     .selection-elements {
         flex-direction: column;
     }
@@ -431,3 +471,16 @@ main {
         width: 220px;
     }
 }
+
+/* Media query para pantallas menores a 350px */
+/* Móviles muy pequeños */
+@media (max-width: 350px) {
+    .summary-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .selection-elements-btn {
+        margin-top: 10px;
+    }
+}
+

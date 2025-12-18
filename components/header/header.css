@@ -1,190 +1,495 @@
+/* Contenedor principal del header */
 .header-main {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: rgb(240,240,240);
-    height: clamp(50px, 8vh, 70px);
+    width: 100%;
     border: solid 2px rgb(200,200,200);
     box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    gap: 15px;
 }
-.header-title {
+
+/* Título del header y enlace */
+.header-title,
+.header-title > a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    width: clamp(10%, 15%, 20%);
+    width: 15%;
+    height: 100%;
     font-family: Arial;
-    font-size: clamp(1rem, 1.5vw, 1.4rem);
-    flex: 1;
+    font-size: 1.2rem;
     color: rgb(37, 99, 235);
+    text-decoration: none;
+    margin-block: 5px;
 }
+
+/* Navegación principal del header */
 .header-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(10px, 1vw, 20px);
-    flex: 2;
-    height: 80%;
-    width: 33%;
+    gap: 15px; 
+    width: 37%;
 }
+
+/* Estilo de los enlaces de navegación */
 .header-nav > a {
     font-family: Arial;
-    font-size: clamp(0.8rem, 0.9vw, 1rem);
+    font-size: 1rem;
     font-weight: bold;
     color: rgb(21, 28, 43);
     text-decoration: none;
-    transition: 50ms;
     transition: transform 50ms ease, color 0.15s ease;
 }
+
+/* Efecto hover en los enlaces de navegación */
 .header-nav > a:hover {
     color: rgb(37, 99, 235);
     transform: scale(1.10);
 }
+
+/* Efecto click en los enlaces de navegación */
 .header-nav > a:active {
     transform: scale(0.90);
 }
+
+/* Contenedor de acciones del header (búsqueda y carrito) */
 .header-actions {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(10px, 2vw, 20px);
-    flex: 2;
+    gap: 10px;
     height: 80%;
-    width: 30%;
+    width: 25%;
 }
+
+/* Estilo del campo de búsqueda */
 .search {
     background-image: url('https://img.icons8.com/ios-filled/50/search.png');
-    background-size: clamp(14px, 2vw, 18px);
+    background-size: 18px;
     background-position: 5px center;
     background-repeat: no-repeat;
     background-color: rgb(225, 225, 225);
     border: solid 2px rgb(21, 28, 43);
     border-radius: 10px;
-    padding-left: 25px;
-    padding-right: 10px;
-    height: 80%;
-    width: clamp(100px, 25vw, 300px);
-    padding: 0.7rem 1rem 0.7rem 2.2rem;
-    font-size: clamp(0.9rem, 1.4vw, 1rem);
+    padding: 10px 20px 10px 30px;
+    width: 60%;
+    height: 35px;
+    font-size: 1rem;
     transition: transform 50ms ease, color 0.15s;
 }
+
+/* Efecto hover del campo de búsqueda */
 .search:hover {
     border: solid 2px rgb(37, 99, 235);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
 }
+
+/* Estilo al enfocar el campo de búsqueda */
 .search:focus {
-    outline: none; 
+    outline: none;
     border: solid 2px rgb(37, 99, 235);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    transform: scale(1);
 }
+
+/* Botón del carrito */
 .cart-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 0.6rem 1rem;
+    padding: 10px 20px;
     background-color: rgb(225, 225, 225);
     border: solid 2px rgb(21, 28, 43);
     border-radius: 8px;
-    width: clamp(90px, 20vw, 150px);
-    height: 80%;
+    width: 40%;
+    height: 35px;
     cursor: pointer;
-    transition: 50ms;
     transition: transform 50ms ease;
 }
+
+/* Icono dentro del carrito */
 #cart-ico {
-    width: clamp(18px, 2vw, 22px);
+    width: 22px;
 }
+
+/* Efecto hover del botón del carrito */
 .cart-btn:hover {
     border: solid 2px rgb(37, 99, 235);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
 }
+
+/* Efecto click del botón del carrito */
 .cart-btn:active {
     transform: scale(0.90);
 }
+
+/* Contenedor de botones de acceso (login y registro) */
 .header-access {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(10px, 2vw, 20px);
-    height: 80%;
-    width: clamp(100px, 20vw, 300px);
-    flex: 1.5;
+    width: 18%;
+    gap: 20px;
 }
+
+/* Botones de login y registro */
 .login,
 .sign-in {
     background-color: rgb(225, 225, 225);
     border: solid 2px rgb(21, 28, 43);
     border-radius: 8px;
-    width: clamp(100px, 9vw, 200px);
-    height: 80%;
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    width: 45%;
+    height: 35px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: 50ms;
     transition: transform 50ms ease;
 }
+
+/* Efectos hover de los botones de acceso */
 .login:hover,
-.sign-in:hover {
+.sign-in:hover,
+.account-btn:hover {
     border: solid 2px rgb(37, 99, 235);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
 }
+
+/* Efectos click de los botones de acceso */
 .login:active,
-.sign-in:active {
+.sign-in:active,
+.account-btn:active {
     transform: scale(0.90);
 }
 
-@media (max-width: 1256px) {
-    .search {
-        width: 150px;
+/* Botón de cuenta de usuario */
+.account-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(225, 225, 225);
+    color: rgba(0, 0, 0);
+    border: solid 2px rgb(21, 28, 43);
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 90%;
+    height: 35px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: transform 50ms ease;
+}
+
+/* Clase para animación de fade-in */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* ANIMACIÓN DE FADE-IN */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
     }
-    .header-nav > a {
-        font-size: clamp(0.6rem, 0.8vw, 1rem);
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 1020px) {
-    .header-main {
-        padding: 3rem;
-        height: auto;
-        gap: 10px;
-    }
-    .header-nav,
-    .header-actions,
-    .header-access {
-        flex-direction: column;
-        height: 100px;
-        width: 100%;
-    }
+/* MEDIA QUERIES: Ajustes para distintos tamaños de pantalla */
+
+/* Pantallas menores a 1250px */
+@media (max-width: 1250px) {
     .header-nav > a {
-        font-size: clamp(0.8rem, 0.9vw, 1rem);
+        font-size: 0.9rem;
+    }
+    .header-title > a > h1 {
+        font-size: 2.2rem;
+        margin-block: 3px;
     }
     .search,
     .cart-btn,
     .login,
-    .sign-in {
-        width: 100%;
+    .sign-in,
+    .account-btn {
+        height: 30px;
+        border: solid 1.5px rgb(21, 28, 43);
+    }
+    .search::placeholder {
+        font-size: 0.9rem;
     }
 }
 
+/* Pantallas menores a 1200px */
+@media (max-width: 1200px) {
+    .header-main {
+        gap: 10px;
+    }
+    .header-title > a > h1 {
+        font-size: 2rem;
+        margin-block: 3px;
+    }
+    .header-nav {
+        gap: 20px;
+    }
+    .header-nav > a {
+        font-size: 0.7rem;
+    }
+    .search {
+        width: 150px;
+    }
+    .login,
+    .sign-in,
+    .cart-btn,
+    .search,
+    .search::placeholder,
+    .account-btn {
+        font-size: 0.7rem;
+        height: 30px;
+    }
+}
 
-@media (max-width: 600px) {
+/* Pantallas menores a 992px */
+@media (max-width: 992px) {
     .header-main {
         flex-direction: column;
-        padding: 1rem;
-        height: auto;
+        gap: 20px;
+        padding: 20px;
+    }
+    .header-nav {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+    .header-title > a > h1 {
+        font-size: 2.2rem;
+    }
+    .header-actions,
+    .header-access {
+        gap: 50px;
+        width: 80%;
+        justify-content: center;
+    }
+    .search,
+    .cart-btn,
+    .login,
+    .sign-in,
+    .account-btn {
+        width: 40%;
+    }
+}
+
+/* Pantallas menores a 768px */
+@media (max-width: 768px) {
+    .header-title > a > h1 {
+        font-size: 2.2rem;
+    }
+    .header-nav > a {
+        font-size: 0.7rem;
+    }
+    .header-nav {
         gap: 10px;
     }
     .header-nav,
     .header-actions,
     .header-access {
-        flex-direction: column;
+        width: 70%;
+        justify-content: center;
+    }
+    .search,
+    .cart-btn,
+    .login,
+    .sign-in,
+    .account-btn {
         width: 100%;
     }
+}
+
+/* Pantallas menores a 480px */
+@media (max-width: 480px) {
+    .header-main {
+        padding: 10px;
+    }
+    .header-nav {
+        flex-direction: column;
+    }
+    .header-nav > a {
+        font-size: 0.8rem;
+    }
+    .header-nav {
+        gap: 10px;
+    }
+    .header-actions,
+    .header-access {
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+    }
+    .search,
+    .cart-btn,
+    .login,
+    .sign-in,
+    .account-btn {
+        width: 100%;
+    }
+}
+
+/* Pantallas menores a 280px */
+@media (max-width: 280px) {
     .search {
-        max-width: 100%;
+        padding-top: 7.5px;
+    }
+    .search::placeholder {
+        font-size: 0.45rem;
+    }
+}
+
+/* MEDIA QUERIES - Zoom out: Pantallas mayores a 1400px */
+@media (min-width: 1400px) {
+    .header-title > a > h1 {
+        font-size: 2.5rem;
+        margin-block: 3px;
+    }
+    .header-nav > a {
+        font-size: 1.1rem;
+    }
+    .search {
+        width: 260px;
+    }
+}
+
+/* Pantallas mayores a 1600px */
+@media (min-width: 1600px) {
+    .header-title > a > h1 {
+        font-size: 2.5rem;
+        margin-block: 3px;
+    }
+    .header-nav > a {
+        font-size: 1.15rem;
+    }
+    .search {
+        width: 300px;
+    }
+}
+
+/* Pantallas mayores a 1800px */
+@media (min-width: 1800px) {
+    .header-title > a > h1 {
+        font-size: 2.5rem;
+        margin-block: 3px;
+    }
+    .header-nav > a {
+        font-size: 1.2rem;
+    }
+    .search {
+        width: 330px;
+    }
+    .search,
+    .cart-btn,
+    .login,
+    .sign-in,
+    .account-btn {
+        height: 40px;
+    }
+}
+
+/* Pantallas mayores a 2000px */
+@media (min-width: 2000px) {
+    .header-title > a > h1 {
+        font-size: 2.5rem;
+        margin-block: 3px;
+    }
+    .header-nav > a {
+        font-size: 1.3rem;
+    }
+    .search {
+        width: 360px;
+        font-size: 1.1rem;
+    }
+    .search,
+    .cart-btn,
+    .login,
+    .sign-in,
+    .account-btn {
+        height: 40px;
+    }
+}
+
+/* Pantallas mayores a 2400px */
+@media (min-width: 2400px) {
+    .header-title > a > h1 {
+        font-size: 2.5rem;
+        margin-block: 3px;
+    }
+    .header-nav > a {
+        font-size: 1.4rem;
+    }
+    .header-nav {
+        width: 25%;
+    }
+    .header-actions {
+        width: 40%;
+        gap: 50px;
+    }
+    .search {
+        width: 1320px;
+        font-size: 1.2rem;
+    }
+    .search,
+    .cart-btn,
+    .login,
+    .sign-in,
+    .account-btn {
+        height: 50px;
+    }
+}
+
+/* Pantallas mayores a 2800px */
+@media (min-width: 2800px) {
+    .header-title > a > h1 {
+        font-size: 2.5rem;
+        margin-block: 3px;
+    }
+    .header-nav > a {
+        font-size: 2rem;
+    }
+    .header-nav {
+        width: 27%;
+        gap: 50px;
+    }
+    .header-actions {
+        width: 45%;
+        gap: 50px;
+    }
+    .search {
+        width: 80%;
+        font-size: 1.8rem;
+    }
+    .cart-btn {
+        width: 10%;
+    }
+    .header-access {
+        width: 15%;
+        gap: 50px;
+    }
+    .search,
+    .cart-btn,
+    .login,
+    .sign-in,
+    .account-btn {
+        height: 60px;
+    }
+
+    .login,
+    .sign-in {
+        max-width: 250px;
+    }
+    .account-btn {
+        max-width: 500px;
     }
 }

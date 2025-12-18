@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const input = document.getElementById('mensajeInput');
-    const chatBody = document.getElementById('chatBody');
+    // Selectores
+    const input = document.getElementById('mensajeInput'); // Input de chat
+    const chatBody = document.getElementById('chatBody'); // Contenedor de mensajes
 
+    // Función para enviar mensaje
     const enviarMensaje = () => {
         const texto = input.value.trim();
-        if (!texto) return;
+        if (!texto) return; // No enviar mensajes vacíos
 
-        // Mensaje del usuario
+        // Crear mensaje del usuario
         const msgUsuario = document.createElement('div');
         msgUsuario.className = 'chat-mensaje usuario';
         msgUsuario.textContent = texto;
@@ -15,19 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // Limpiar input
         input.value = '';
 
+        // Scroll al final
         chatBody.scrollTop = chatBody.scrollHeight;
 
-        // Respuesta automática
+        // Respuesta automática del agente
         setTimeout(() => {
             const msgAgente = document.createElement('div');
             msgAgente.className = 'chat-mensaje agente';
-            msgAgente.textContent = '¡Gracias por tu mensaje! En breve un agente te atenderá. 😊';
+            msgAgente.textContent = '¡Gracias por tu mensaje! En breve un agente te atenderá.';
             chatBody.appendChild(msgAgente);
+
+            // Scroll al final
             chatBody.scrollTop = chatBody.scrollHeight;
         }, 1000);
     };
 
-    // Enviar con Enter
+    // Enviar mensaje al presionar Enter
     input.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             enviarMensaje();

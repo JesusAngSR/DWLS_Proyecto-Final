@@ -6,22 +6,23 @@
     <title>PCs Armadas - TechStore</title>
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/components/header/header.css">
-    
-    <!-- Estilos específicos para esta página -->
+    <!-- Estilos de la página PCs Armadas -->
     <link rel="stylesheet" href="/css/pcs-armadas.css">
-    
-    <script src="/components/header/insert-header.js" defer></script>
+    <!-- JS Header -->
+    <script src="/components/header/header.js" defer></script>
 </head>
 <body>
+    <!-- HEADER -->
     <div include-html="/components/header/index.html"></div>
 
-    <!-- Contenido principal -->
+    <!-- Contenido principal de PCs Armadas -->
     <main class="pcs-armadas-container">
+        <!-- Hero section -->
         <section class="hero-section">
             <h1>PCs Armadas Listas para Battlestation</h1>
             <p>Elige tu máquina ideal: gaming, edición, oficina o streaming. Todas probadas y con garantía.</p>
         </section>
-
+        <!-- Barra de filtros -->
         <div class="filter-bar">
             <button class="filter-btn active" data-category="all">Todos</button>
             <button class="filter-btn" data-category="entry">Entrada</button>
@@ -29,12 +30,13 @@
             <button class="filter-btn" data-category="high">Alta</button>
             <button class="filter-btn" data-category="ultra">Ultra</button>
         </div>
-
+        <!-- Grilla de PCs -->
         <div class="pcs-grid" id="pcs-grid">
             <!-- Las PCs se generarán con JavaScript -->
         </div>
+        <!-- Botón ir al carrito -->
+        <a href="/pages/07-carrito/index.html" class="btn-go-cart">🛒</a>
     </main>
-
     <!-- Script para cargar las PCs -->
     <script src="/js/pcs-armadas.js" defer></script>
 </body>
